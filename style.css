@@ -3,7 +3,7 @@
 body { 
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #1a1a1a; 
+    background-color: #ffffff; 
 }
 .container { 
     max-width: 600px;
@@ -12,11 +12,11 @@ body {
 }
 h1 {
     font-size: 48px; 
-    color: #aaaaaa; 
+    color: #000000; 
 }
 p { 
     font-size: 18px; 
-    color: #b4b4b4; 
+    color: #000000; 
 }
 .search-bar { 
     margin: 20px 0; 
@@ -24,7 +24,7 @@ p {
 footer { 
     margin-top: 50px; 
     font-size: 14px; 
-    color: #cccccc; 
+    color: #000000; 
 }
 a:hover{
     color: rgb(226, 226, 226);
